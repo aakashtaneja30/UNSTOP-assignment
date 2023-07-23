@@ -1,0 +1,33 @@
+.seat-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .seat {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    margin: 2px;
+    font-weight: bold;
+  }
+  
+  .booked-seat {
+    background-color: #FF6347; /* Red */
+  }
+  
+  .available-seat {
+    background-color: #98FB98; /* Green */
+  }
+  
+  .missing-seat {
+    background-color: #D3D3D3; /* Grey */
+  }
+  

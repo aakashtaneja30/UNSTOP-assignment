@@ -1,0 +1,24 @@
+<div>
+    <h1>Train Seat Booking</h1>
+    <label for="numSeats">Number of Seats to Book:</label>
+    <input type="number" id="numSeats" [(ngModel)]="numSeatsToBook" min="1" max="7">
+    <button (click)="onBookSeats()">BOOK</button>
+    <button (click)="clearAllBooking()">RESET</button>
+  </div>
+  
+  <div class="seat-container" *ngIf="showSeats">
+    <div class="row" *ngFor="let row of rowTwoDimensionalArray">
+      <div
+        *ngFor="let seat of row"
+        class="seat"
+        [ngClass]="{
+          'booked-seat': seat?.booked,
+          'available-seat': !seat?.booked,
+          'missing-seat': seat==null
+        }"
+      >
+        {{seat?.id || 'XX'}}
+      </div>
+    </div>
+  </div>
+  
